@@ -1,8 +1,96 @@
+
+
 html, body {
   margin: 0;
   padding: 0;
+  font-family: 'Doto'; /* Fallback to sans-serif */
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling */
 }
 
 canvas {
   display: block;
+}
+
+
+
+
+
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Overlay text */
+#overlay {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(89, 88, 88);
+  text-align: center;
+  z-index: 10;
+}
+
+#overlay h1 {
+  font-family: 'Doto';
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+#overlay p {
+  font-size: 1.2em;
+}
+
+
+/* Canvas */
+canvas {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Behind the text */
+}
+
+
+/* Button container */
+.button-container {
+  margin-top: auto; /* Push the button to the bottom */
+  text-align: center;
+  margin-top: 50px; /* Add space at the bottom */
+  
+}
+
+
+/* GitHub button styling */
+.github-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.github-button:hover {
+  background-color: #555;
+  transform: translateY(-3px);
+}
+
+/* GitHub icon styling */
+.github-button i {
+  font-size: 18px;
 }
