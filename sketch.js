@@ -1,15 +1,13 @@
-let distmouse = 30;  // this is a global variable and can be used anywhere 
-let cols; let rows; let size = 20; let offset = 4;
+let distmouse = 20;  // this is a global variable and can be used anywhere 
+let cols; let rows; let size = 10; let offset = 4;
 let blocks = [];  // this is an array 
 
-
 function setup() {
-  createCanvas(800, 1000);
+  createCanvas(1900, 400);
   rectMode(CENTER) // THIS FUCTION CENTERS THE RECTANNGLE
   angleMode(DEGREES)
   cols = width/size;
   rows = height/size;
-  
   
 
  // 2darray with a nested for loop
@@ -17,9 +15,7 @@ function setup() {
     blocks[i] = [];
     for ( let j = 0; j < rows; j++) {
       blocks[i][j] = new Block(size/2 + i * size, size/2 + j * size) // this is a block object
-       
     }
-
    }
 }
 
@@ -30,8 +26,5 @@ function draw() {
       blocks[i][j].move();
       blocks[i][j].display();
     }
-
-   } 
-   
-  
+   }   
 }
